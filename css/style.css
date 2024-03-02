@@ -1,0 +1,668 @@
+/* CSS reset, start with a clean slate */ 
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+body {
+    font-family: 'Title2Font', Arial, sans-serif;
+    color: #000000;
+    line-height: 1.6;
+    background-color: #fefdea;
+    display: flex;
+    flex-direction: column;
+}
+
+html, body {
+    height: 100%; 
+    margin: 0; 
+}
+
+main {
+    flex-grow: 1; 
+}
+
+h1, h2, h3 {
+    font-family: 'TitleFont', Arial, sans-serif;
+}
+
+.fallback-font {
+    font-family: Arial, sans-serif; 
+}
+
+header {
+    flex-shrink: 0;
+    height: 400px;
+    background: #45A4CA;
+    color: #fefdea;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    position: relative;
+    background-image: 
+        url('/assets/img/flower.png'), 
+        url('/assets/img/flower.png'), 
+        url('/assets/img/flower.png'),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,60 Q150,90 300,60 Q450,30 600,60 Q750,90 900,60 Q1050,30 1200,60 V120 H0 Z' fill='%23fefdea'/%3E%3C/svg%3E");
+    background-position: 
+        10% 20%, /* Position of the first flower */
+        50% 80%, /* Position of the second flower */
+        80% 40%, /* Position of the flowers */
+        bottom center; /* Position of the SVG */
+    background-repeat: no-repeat;
+    background-size: 
+        100px 100px, /* Size of the first flower */
+        100px 100px, /* Size of the second flower */
+        100px 100px, /* Size of the third flower */
+        100% 100px; /* Size of the SVG */
+} 
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #04c;
+}
+
+#hero {
+    position: absolute;
+    bottom: 140px; 
+    left: 0;
+    width: 100%;
+    text-align: center; 
+    padding: 2rem 0;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+}
+
+#hero p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+}
+
+/* -------------------Projects------------------- */
+#grid-container {
+    padding-top: 0;
+    margin: 0 auto;  
+    max-width: 1100px;  
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 40px; 
+    justify-content: center; 
+    padding-bottom: 0;
+    
+}
+
+.project {
+    text-align: center; 
+    background-color: #f3e0af;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    
+}
+
+#grid-container .project {
+    color: #000000 !important; 
+    text-decoration: none !important;
+}
+
+#grid-container .project:hover {
+    text-decoration: none !important;
+    color: #000000 !important;
+}
+
+
+.projects-wrapper {
+    background-color: #E9C66C;
+    padding: 20px; 
+    margin: 20px auto; 
+    max-width: 1100px; 
+    border-radius: 15px;
+}
+
+.side-picture {
+    background-image: url('/assets/img/star.gif'), url('/assets/img/star.gif'), url('/assets/img/star.gif'), url('/assets/img/star.gif'), url('/assets/img/star.gif'), url('/assets/img/star.gif'); 
+    background-position: left 10%, left 50%, left 90%, right 10%, right 50%, right 90%; 
+    background-size: 10%, 10%, 10%, 10%, 10%, 10%; 
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+}
+
+#project_title, #grid-container {
+    margin: 0; 
+    padding: 0px 0; 
+}
+
+#project_title {
+    padding-top: 0;
+    margin-bottom: 10px;
+    padding-bottom: 0;
+    text-align: center; 
+
+    background-image: url('/assets/img/flower_pot.png'), url('/assets/img/flower_pot.png'); 
+    background-position: left center, right center; 
+    background-size: contain, contain; 
+    background-repeat: no-repeat, no-repeat;
+}
+
+#project_title h1 {
+    margin-bottom: 70px;
+    display: inline-block;
+    margin-top: 70px;
+    border-bottom: 5px solid #80B252; 
+    padding-bottom: 8px;
+    font-size: 36px;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+}
+
+
+
+
+/* ------Main Personal Image---------- */
+.image-container {
+    display: flex;
+    justify-content: center; 
+    margin-top: 10px; 
+}
+
+#main-image {
+    border: 8px dotted #80B252; 
+    border-radius: 30px; 
+    max-width: 25%; 
+    height: auto; 
+}
+
+
+#cgs1-image {
+    border: 8px dashed #E9C66C; 
+    border-radius: 30px; 
+    max-width: 15%; 
+    height: auto; 
+    margin-left: 30px; 
+    transform: rotate(10deg); 
+    align-self: flex-start; 
+}
+
+#speaking-image {
+    border: 8px solid #ffcbd2; 
+    border-radius: 30px;
+    max-width: 15%; 
+    height: auto; 
+    margin-right: 30px; 
+    transform: rotate(-10deg); 
+    align-self: flex-start; 
+    margin-top: 120px;
+}
+
+#binary-image {
+    border: 8px solid #c497c3; 
+    border-radius: 30px;
+    max-width: 15%; 
+    height: auto; 
+    margin-left: 30px; 
+    align-self: flex-end; 
+    transform: rotate(-5deg); 
+} 
+
+
+#cgs-activity-image{
+    border: 8px dashed #A2D9CE; 
+    border-radius: 30px; 
+    max-width: 15%; 
+    height: auto; 
+    margin-right: 30px; 
+    align-self: flex-end; 
+    transform: rotate(5deg); 
+} 
+
+
+/* ------FONTS---------- */
+@font-face {
+    font-family: 'TitleFont';
+    src: url('/assets/fonts/YeastyFlavorsRegular-yweyd.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Title2Font';
+    src: url('/assets/fonts/SummaryNotesRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+
+
+
+
+/* ----------------experience section---------------- */
+.experience-section {
+    margin: 100px 0; 
+    padding: 30px; 
+    background-color: #80B252;
+    width: 100vw; 
+    box-sizing: border-box; 
+    clip-path: ellipse(80% 50% at 50% 50%);
+    min-height: 500px;
+    text-align: center;
+
+    background-image: url('/assets/img/cityoftallahassee.png'), url('/assets/img/fsu_icamp.png');
+    background-position: left center, right center;
+    background-size: 20%, 20%;
+    background-repeat: no-repeat, no-repeat; 
+
+}
+
+.job h3 {
+    margin-top: 10;
+}
+
+.job-duration {
+    font-style: italic;
+    color: #000000; 
+}
+
+.job ul {
+    list-style: inside; 
+}
+
+.job li {
+    margin-bottom: 10px; 
+}
+
+
+
+
+
+
+
+
+/* ----------------leadership experience---------------- */
+.leadership-experience-section {
+    margin: 30px 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.leadership-experience-section h2 {
+    background-color: #ffcbd2; 
+    display: inline-block;
+    font-size: 30px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.leadership-experience-section h3 {
+    text-decoration: underline;
+    text-underline-offset: 3px; 
+    text-decoration-thickness: 2px; 
+    text-decoration-color: #ffcbd2; 
+}
+
+.leadership-role {
+    margin: 50px 0;
+    padding: 0px;
+    text-align: center;
+}
+
+.leadership-role h3, .leadership-duration, .leadership-role ul {
+    font-style: italic;
+    color: #000000; 
+    list-style: inside; 
+}
+
+.leadership-images {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+    padding-top: 20px; 
+    align-items: flex-start; 
+}
+
+.leadership-img {
+    width: 250px; 
+    height: auto; 
+    border: 6px dashed #ffcbd2; 
+    border-radius: 10px; 
+}
+
+.image-caption {
+    display: block;
+    background-color: #ffcbd2;
+    color: #000000;
+    font-size: 0.8em;
+    padding: 5px;
+    border-radius: 0 0 10px 10px;
+    width: 200px; 
+    word-wrap: break-word; 
+    box-sizing: border-box; 
+    text-align: center; 
+    margin-top: 5px;
+}
+
+.image-container2 {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+
+}
+
+.connecting_girls_to_stem {
+    background-image: url('/assets/img/pink_flower.png'), url('/assets/img/pink_flower.png'), url('/assets/img/pink_flower.png'), url('/assets/img/pink_flower.png'), url('/assets/img/pink_flower.png'), url('/assets/img/pink_flower.png');
+    background-position: left center, right center, 80% 10%, 10% 90%, 10% 10%, 90% 90%;
+    background-size: 10%;
+    background-repeat: no-repeat;; 
+}
+
+.leadership-img2 {
+    width: 250px; 
+    height: auto; 
+    border: 6px dashed #fff; 
+    border-radius: 10px; 
+}
+
+.image-caption2 {
+    display: block;
+    background-color: #fff;
+    color: #000000;
+    font-size: 0.8em;
+    padding: 5px;
+    border-radius: 0 0 10px 10px;
+    width: 200px; 
+    word-wrap: break-word; 
+    box-sizing: border-box; 
+    text-align: center; 
+    margin-top: 5px;
+}
+
+.white-font li {
+    color:#fff 
+}
+
+.TSA {
+    background-color: #45A4CA;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,60 Q150,90 300,60 Q450,30 600,60 Q750,90 900,60 Q1050,30 1200,60 V120 H0 Z' fill='%23fefdea'/%3E%3C/svg%3E");
+    background-size: 100% 100px; 
+    background-repeat: no-repeat;
+    padding: 70px 50px; 
+    margin: 20px auto; 
+    background-position: bottom;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------contact.css---------------- */
+#contact-info {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: space-between; 
+    margin: 2rem auto;
+    max-width: 600px;
+    padding: 1rem;
+}
+
+.contact-gif {
+    max-width: 80%; 
+}
+
+.contact-gif img {
+    width: 100%; 
+    height: auto; 
+}
+
+
+
+
+
+/* ----------------about.css---------------- */
+
+.about-section {
+    border: 8px dashed #c497c3; 
+    border-radius: 30px;
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.about-section h2 {
+    font-size: 28px; 
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 18px; 
+    line-height: 1.6; 
+    margin-bottom: 20px;
+}
+
+
+
+.education-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 8px dashed #80B252; 
+    border-radius: 30px;
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.education-section h2 {
+    font-size: 28px; 
+    margin-bottom: 20px;
+}
+
+.education-section p {
+    font-size: 18px; 
+    line-height: 1.6; 
+    margin-bottom: 20px;
+}
+
+.education-section h2 {
+    text-decoration: underline;
+    text-decoration-color: #80B252;
+    text-decoration-thickness: 5px;
+}
+
+.text-content1 {
+    flex: 1; 
+}
+
+.book-gif {
+    max-width: 20%; 
+    height: auto; 
+    margin-left: 20px; 
+}
+
+
+
+
+
+.skills-section {
+    border: 8px dashed #A2D9CE; 
+    border-radius: 30px; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.skills-section h2 {
+    font-size: 28px; 
+    margin-bottom: 20px;
+}
+
+.skills-section p {
+    font-size: 18px; 
+    line-height: 1.6; 
+    margin-bottom: 20px;
+}
+
+.skills-section h2 {
+    text-decoration: underline;
+    text-decoration-color: #A2D9CE;
+    text-decoration-thickness: 5px;
+}
+
+
+
+
+
+.courses-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 8px dashed #E9C66C; 
+    border-radius: 30px; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.courses-section h2 {
+    font-size: 28px; 
+    margin-bottom: 20px;
+}
+
+.courses-section p {
+    font-size: 18px; 
+    line-height: 1.6; 
+    margin-bottom: 20px;
+}
+
+.courses-section h2 {
+    text-decoration: underline;
+    text-decoration-color: #E9C66C;
+    text-decoration-thickness: 5px;
+}
+
+
+.text-content1 {
+    flex: 1; 
+}
+
+.brain-gif {
+    max-width: 20%; 
+    height: auto; 
+    margin-left: 20px; 
+}
+
+#resume-section {
+    background-color: #E9C66C; 
+    padding: 20px; 
+    text-align: center; 
+    border-radius: 8px; 
+    margin: 30px auto; 
+    max-width: 600px; 
+    font-size: 150%;
+}
+
+
+
+
+
+
+
+
+
+/* ----------------project.css---------------- */
+
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 40px; 
+    justify-content: center; 
+    align-items: start; 
+    padding: 20px;
+    margin: 0 auto; 
+    max-width: 1100px; 
+}
+
+.project img {
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 5px; 
+    margin-bottom: 15px; 
+}
+
+.project a {
+    color: #45A4CA; 
+    text-decoration: none; 
+}
+
+.project a:hover {
+    text-decoration: underline; 
+}
+
+
+
+
+
+

@@ -1,0 +1,233 @@
+/* Project Page Reset and Basics */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Title2Font', Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #fefdea;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+} 
+
+
+h1, h2, h3 {
+    color: #000000;
+    font-family: 'TitleFont', sans-serif;
+}
+
+.fallback-font {
+    font-family: Arial, sans-serif; 
+}
+header {
+    flex-shrink: 0;
+    height: 400px;
+    background: #45A4CA;
+    color: #fefdea;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    position: relative;
+    background-image: 
+        url('/assets/img/flower.png'), 
+        url('/assets/img/flower.png'), 
+        url('/assets/img/flower.png'),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,60 Q150,90 300,60 Q450,30 600,60 Q750,90 900,60 Q1050,30 1200,60 V120 H0 Z' fill='%23fefdea'/%3E%3C/svg%3E");
+    background-position: 
+        10% 20%, /* Position of the first flower */
+        50% 80%, /* Position of the second flower */
+        80% 40%, /* Position of the flowers */
+        bottom center; /* Position of the SVG */
+    background-repeat: no-repeat;
+    background-size: 
+        100px 100px, /* Size of the first flower */
+        100px 100px, /* Size of the second flower */
+        100px 100px, /* Size of the third flower */
+        100% 100px; /* Size of the SVG */
+} 
+
+nav {
+    z-index: 2000; /* Ensures the nav is above other content */
+    position: relative; /* May be necessary for z-index to take effect */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #04c;
+}
+
+#hero {
+    position: absolute;
+    bottom: 140px; 
+    left: 0;
+    width: 100%;
+    text-align: center; 
+    padding: 2rem 0;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+}
+
+#hero p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Sections */
+.project-features {
+    max-width: 40%; 
+    width: 40%;
+    margin-right: auto; 
+    margin-left: 0; 
+}
+
+.image-1 {
+    max-width: 20%; 
+    height: auto; 
+    margin-left: -50px; 
+}
+
+.features-with-image {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    max-width: 1200px; 
+    margin: auto; 
+} 
+
+
+.technologies-used {
+    max-width: 40%; 
+    width: 40%;
+    margin-left: auto; 
+}
+
+.image-2 {
+    max-width: 30%; 
+    height: auto; 
+}
+
+.technologies-with-image {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start;; 
+    max-width: 1200px; 
+    margin: auto; 
+}
+
+
+
+.project-gallery {
+    max-width: 50%; 
+    width: 50%;
+    margin-right: auto; 
+    margin-left: 0; 
+}
+.project-links {
+    max-width: 40%; 
+    width: 40%;
+    margin-left: auto; 
+    margin-right: 0; 
+}
+
+.project-features, .technologies-used, .project-gallery, .project-links {
+    /* max-width: 800px; */
+    background-color: #8dba64;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.project-features ul, .technologies-used ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+.project-gallery img {
+    width: 100%;
+    max-width: 400px; /* Adjust based on your preference */
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.project-links a {
+    color: #45A4CA;
+    text-decoration: none;
+}
+
+.project-links a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+}
+
+
+/* ------FONTS---------- */
+@font-face {
+    font-family: 'TitleFont';
+    src: url('/assets/fonts/YeastyFlavorsRegular-yweyd.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Title2Font';
+    src: url('/assets/fonts/SummaryNotesRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
