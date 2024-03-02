@@ -19,6 +19,7 @@ body {
 html, body {
     height: 100%; 
     margin: 0; 
+    overflow-x: hidden;
 }
 
 main {
@@ -27,6 +28,66 @@ main {
 
 h1, h2, h3 {
     font-family: 'TitleFont', Arial, sans-serif;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    header {
+        height: auto; 
+        padding: 1rem;
+    }
+
+    #hero {
+        position: static; 
+        padding: 1rem;
+    }
+
+    #hero h1 {
+        font-size: 1.8rem; 
+    }
+
+    #hero p {
+        font-size: 1rem; 
+    }
+
+    #grid-container {
+        grid-template-columns: 1fr; 
+    }
+
+    .image-container img, .leadership-img, .leadership-img2 {
+        max-width: 90%; 
+        height: auto;
+        margin: 10px 0; 
+    }
+
+    .side-picture {
+        background-size: 20%; 
+        background-position: center;
+    }
+
+    .leadership-images, .image-container2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-caption, .image-caption2 {
+        width: 90%; 
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px; 
+    }
+
+    h1, h2, h3 {
+        font-size: 1.2rem; 
+    }
+
+    
+    .project, .experience-section, .leadership-experience-section, .TSA {
+        padding: 20px; 
+    }
 }
 
 .fallback-font {
