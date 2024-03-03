@@ -78,6 +78,11 @@ h1, h2, h3 {
         flex-direction: column;
         align-items: center;
     }
+
+    .image-container {
+        padding: 10px;
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -130,6 +135,8 @@ header {
     color: #fefdea;
     padding: 1rem 0;
     position: sticky;
+    bottom: 0;
+    width: 100%;
     top: 0;
     z-index: 1000;
     position: relative;
@@ -193,7 +200,7 @@ nav ul li a:hover {
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
-        text-align: center;
+        display: none; 
     }
 
     nav ul li {
@@ -204,6 +211,12 @@ nav ul li a:hover {
         font-size: 2rem;
     }
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 
 /* -------------------Projects------------------- */
 #grid-container {
