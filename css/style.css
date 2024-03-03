@@ -31,99 +31,6 @@ h1, h2, h3 {
     font-size: 1.5rem;
 }
 
-@media (max-width: 768px) {
-    header {
-        height: auto; 
-        padding: 1rem;
-    }
-
-    #hero {
-        position: static; 
-        padding: 1rem;
-    }
-
-    #hero h1 {
-        font-size: 1.8rem; 
-    }
-
-    #hero p {
-        font-size: 1rem; 
-    }
-
-    #grid-container {
-        grid-template-columns: 1fr; 
-    }
-
-    .image-container img, .leadership-img, .leadership-img2 {
-        max-width: 90%; 
-        height: auto;
-        margin: 10px 0; 
-    }
-
-    .side-picture {
-        background-size: 20%; 
-        background-position: center;
-    }
-
-    .leadership-images, .image-container2 {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .image-caption, .image-caption2 {
-        width: 90%; 
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .image-container {
-        padding: 10px;
-    }
-
-}
-
-@media (max-width: 480px) {
-    body {
-        font-size: 14px; 
-    }
-
-    h1, h2, h3 {
-        font-size: 1.2rem; 
-    }
-
-    
-    .project, .experience-section, .leadership-experience-section, .TSA {
-        padding: 20px; 
-    }
-
-    nav ul li a {
-        font-size: 14px; 
-        padding: 10px; 
-    }
-}
-
-/* Hamburger Icon */
-.nav-toggle .hamburger {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    margin: 5px 0; 
-}
-
-/* Initially hide the navigation menu on mobile */
-.nav {
-    display: none;
-}
-
-/* Show the menu when 'open' class is added */
-.nav.open {
-    display: block;
-}
-
 .fallback-font {
     font-family: Arial, sans-serif; 
 }
@@ -159,20 +66,101 @@ header {
 } 
 
 nav ul {
-    list-style: none;
-    padding: 0;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center; 
 }
 
 nav ul li {
     margin: 0 15px;
 }
 
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: row; 
+    }
+
+    header {
+        padding-top: 10px; 
+    }
+
+    #hero {
+        margin-top: 2rem;
+        position: static;
+        padding: 1rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .leadership-images {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* This will center the images */
+        justify-content: center;
+    }
+
+    .image-container2 {
+        width: 100%; /* Ensure the container takes full width */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center-align the content */
+        text-align: center; /* Ensure text is also centered */
+    }
+
+    .leadership-img, .leadership-img2 {
+        width: 80%; /* Adjust the width as needed for mobile */
+        margin: 0 auto; /* Add auto margin to center images */
+    }
+
+    .image-caption, .image-caption2 {
+        margin-top: 10px; /* Adjust spacing between image and caption */
+        width: 80%; /* Match the image width for consistency */
+        text-align: center; /* Ensure captions are centered */
+    }
+
+
+    .image-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .image-container img {
+        max-width: 80%; 
+        margin: 10px 0; 
+    }
+
+    .image-container img:nth-child(1), .image-container img:nth-child(2) {
+        order: 1;
+    }
+
+    .image-container img:nth-child(3) {
+        max-width: 90%; 
+        order: 2; 
+    }
+
+    .image-container img:nth-child(4), .image-container img:nth-child(5) {
+        order: 3;
+    }
+
+}
+
+
+nav {
+    z-index: 10; 
+    position: relative; 
+}
+
+
 nav ul li a {
     color: #fff;
     text-decoration: none;
     transition: color 0.3s ease;
+    padding: 15px; 
+    font-size: 16px;
 }
 
 nav ul li a:hover {
@@ -195,21 +183,6 @@ nav ul li a:hover {
 #hero p {
     margin-top: 1rem;
     font-size: 1.2rem;
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        display: none; 
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    #hero h1 {
-        font-size: 2rem;
-    }
 }
 
 img {
@@ -283,6 +256,14 @@ img {
     background-size: contain, contain; 
     background-repeat: no-repeat, no-repeat;
 }
+
+@media (max-width: 768px) {
+    #project_title {
+        background-size: 20%, 20%; /* Adjust the size of the images */
+        background-position: 10% center, 90% center; /* Adjust the position */
+    }
+}
+
 
 #project_title h1 {
     margin-bottom: 70px;
