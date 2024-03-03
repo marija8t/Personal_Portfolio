@@ -73,6 +73,11 @@ h1, h2, h3 {
     .image-caption, .image-caption2 {
         width: 90%; 
     }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media (max-width: 480px) {
@@ -88,6 +93,30 @@ h1, h2, h3 {
     .project, .experience-section, .leadership-experience-section, .TSA {
         padding: 20px; 
     }
+
+    nav ul li a {
+        font-size: 14px; 
+        padding: 10px; 
+    }
+}
+
+/* Hamburger Icon */
+.nav-toggle .hamburger {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0; 
+}
+
+/* Initially hide the navigation menu on mobile */
+.nav {
+    display: none;
+}
+
+/* Show the menu when 'open' class is added */
+.nav.open {
+    display: block;
 }
 
 .fallback-font {
