@@ -25,8 +25,52 @@ main {
     padding: 20px;
 } 
 
+@media (max-width: 768px) {
+    .project-features, .technologies-used, .project-gallery, .project-links {
+        max-width: 100%; 
+        width: 100%; 
+        margin: 10px 0; 
+        padding: 15px; 
+    }
 
-h1, h2, h3 {
+    .project-features h2, .technologies-used h2, .project-gallery h2, .project-links h2,
+    .project-features p, .technologies-used p, .project-gallery p, .project-links p,
+    .project-features ul, .technologies-used ul, .project-gallery img, .project-links a {
+        font-size: 14px; 
+        line-height: 1.5; 
+    }
+
+    .project-features ul, .technologies-used ul {
+        padding-left: 20px; 
+    }
+
+    .project-gallery img, .project-links a {
+        max-width: 100%; 
+        height: auto; 
+    }
+}
+
+@media (max-width: 768px) {
+    body .experience-section, 
+    body .leadership-experience-section, 
+    body .project-features, 
+    body .technologies-used, 
+    body .project-gallery, 
+    body .project-links {
+        max-width: 100%;
+        width: 100%;
+        margin: 10px 0;
+        padding: 15px;
+    }
+}
+
+
+h1 {
+    color: #ffffff;
+    font-family: 'TitleFont', sans-serif;
+}
+
+h2, h3 {
     color: #000000;
     font-family: 'TitleFont', sans-serif;
 }
@@ -63,15 +107,14 @@ header {
 } 
 
 nav {
-    z-index: 2000; /* Ensures the nav is above other content */
-    position: relative; /* May be necessary for z-index to take effect */
+    z-index: 2000; 
+    position: relative; 
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center; 
 }
 
 nav ul li {
@@ -97,6 +140,23 @@ nav ul li a:hover {
     padding: 2rem 0;
 }
 
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: row; 
+    }
+
+    header {
+        padding-top: 10px; 
+    }
+
+    #hero {
+        margin-top: 2rem;
+        position: static;
+        padding: 1rem;
+        text-align: center;
+    }
+}
+
 #hero h1 {
     font-size: 2.5rem;
 }
@@ -106,20 +166,6 @@ nav ul li a:hover {
     font-size: 1.2rem;
 }
 
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    #hero h1 {
-        font-size: 2rem;
-    }
-}
 
 /* Sections */
 .project-features {
